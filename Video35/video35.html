@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programando en jQuery</h1>
+    <h3>Módulo 3: jQuery y HTML</h3>
+
+    <div class="ejemploAfter" style="border: 1px dashed black">
+        hola
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="ejemploAppend" style="border: 1px solid red">
+        Saludos
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="ejemploPrepend" style="border: 1px dashed green">
+        Prepend
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="ejemploBefore" style="border: 1px dashed Blue">
+        Before
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            $(".ejemploAppend").append(",Felipe");
+            $(".ejemploAfter").after("Roberto");
+            $(".ejemploPrepend").prepend("Ambrosio");
+            $(".ejemploBefore").before("Rigoberto");
+            // After y Before sirven también para mover elementos si en la
+            // función ponemos un elemento ya existente.
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programando en jQuery</h1>
+    <h3>Módulo 3: jQuery y HTML</h3>
+
+    <table id="miTabla">
+        <thead>
+            <tr>
+                <td>header 1</td>
+                <td>header 2</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        $(function() {
+            var miObjeto1 = {valor1: "A", valor2: "B"};
+            var miObjeto2 = {valor1: "C", valor2: "D"};
+            var miObjeto3 = {valor1: "E", valor2: "F"};
+            var miObjeto4 = {valor1: "G", valor2: "H"};
+            var miArreglo = [];  // Generalmente, esta información viene de un servidor
+            miArreglo.push(miObjeto1);
+            miArreglo.push(miObjeto2);
+            miArreglo.push(miObjeto3);
+            miArreglo.push(miObjeto4);
+
+            for (var i = 0; i < miArreglo.length; i++){
+                var $td1 = $("<td>").append(miArreglo[i].valor1);
+                var $td2 = $("<td>").append(miArreglo[i].valor2);
+
+                $("<tr>").append($td1).append($td2).appendTo("tbody");
+            }
+
+        })
+
+
+    </script>
+</body>
+</html>
