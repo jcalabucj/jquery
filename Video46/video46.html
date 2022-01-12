@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Programando en jQuery</h1>
+    <h3>Módulo 5 - Eventos en JQuery</h3>
+
+    <div>
+        div 1
+    </div>
+
+
+    <script type="text/javascript">
+        // Eliminando eventos (función off)
+        $(function() {
+            $(document).on("click", "div", function() {
+                var cantidadDeDivs = $("div").length;
+                var numeroDelDivACrear = cantidadDeDivs + 1;
+
+                if (numeroDelDivACrear === 5)
+                {
+                    $(document).off("click", "div");
+                }
+                $("<div>").append("div " + numeroDelDivACrear).appendTo("body");
+            })
+
+        });
+    </script>
+</body>
+</html>
